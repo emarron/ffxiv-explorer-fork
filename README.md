@@ -4,6 +4,15 @@ FFXIV_DataExtractor
 
 This is a fork of [FFXIV Explorer Fork by goaaats](https://github.com/goaaats/ffxiv-explorer-fork) which is a fork of [FFXIV Explorer by Ioncannon](https://bitbucket.org/Ioncannon/ffxiv-explorer/overview) with some usability changes and new features.
 
+My (emarron) fork,
+
+* Updates the paths for endwalker.
+* Changes TEX export from PNG to TGA, to better support images with transparency.
+* Changes the path search to only show *.tex files.
+
+Basically, this lets you grab all the texture files in the game and exports them as TGA files.
+
+
 PoC ULD reader courtesy of [RozeDoyanawa](https://github.com/RozeDoyanawa).
 
 ## To use
