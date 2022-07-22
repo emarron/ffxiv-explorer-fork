@@ -2,7 +2,7 @@ FFXIV_DataExtractor
 ===================
 
 
-This is a fork of [FFXIV Explorer Fork by goaaats](https://github.com/goaaats/ffxiv-explorer-fork) which is fork of [FFXIV Explorer by Ioncannon](https://bitbucket.org/Ioncannon/ffxiv-explorer/overview) with some usability changes and new features.
+This is a fork of [FFXIV Explorer Fork by goaaats](https://github.com/goaaats/ffxiv-explorer-fork) which is a fork of [FFXIV Explorer by Ioncannon](https://bitbucket.org/Ioncannon/ffxiv-explorer/overview) with some usability changes and new features.
 
 PoC ULD reader courtesy of [RozeDoyanawa](https://github.com/RozeDoyanawa).
 
