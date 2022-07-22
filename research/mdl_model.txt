@@ -1,0 +1,76 @@
+#### MODEL FILE RESEARCH ####
+
+0x000: UNKNOWN    	   0x40 Bytes; Dunno, but the offsets assume 0x40 extra bytes.				 
+
+--CHUNK 1--
+
+Variable amount of D3DVERTEXELEMENT9 structs, all 0x88 in size. Max 17 of them it seems.
+Used to initialize the buffers if using DirectX, and also defines what the buffers consist of.
+
+--Chunk 2--
+
+0x000: Num Strings			  Int; Number of strings in the string block.
+0x004: String Block Size	  Int; Size of the string block.
+0x008: String Block			     ; Material paths and animation names?
+
+--Post String block
+
+0x000: Unknown				  Int; 
+0x004: Unknown				Short;
+0x006: Atr Count			Short;
+0x008: Unknown				Short;
+0x00a: Material Count		Short;
+0x00c: Bone Count			Short;
+0x00e: Shp Count			Short;
+0x010: Unknown				Short;
+0x012: Unknown			    Short;
+0x016: Num Structs			Short;
+
+
+0x034: Structs					 ;Structs here are 0x20 in size * num structs
+
+--LOD HEADERS START [Repeat three times]--
+--LOD 1 HEADER
+0x000: Num meshes LOD1      Short; 
+--Skipping 0x28 bytes-- 
+0x02c: Vertex Buffer Size     Int;
+0x030: Index Buffer Size      Int;
+0x034: Vertex Buffer Offset   Int;
+0x038: Index  Buffer Offset   Int;
+--LOD 2 HEADER; Same as LOD1 Header
+--LOD 3 HEADER; Same as LOD1 Header
+
+--LOD MESH TABLE-- (Size of Num LOD1 Meshes)
+0x000: Vertex Count			  Int;
+0x004: Index Count			  Int;
+0x008: Material Number		Short;
+0x00a: Unknown				Short;
+0x00c: Unknown   			  Int;
+0x010: Index Buffer Offset	  Int;
+0x014: Vertex Buffer Offset   Int;
+0x018: Unknown   			  Int;
+0x01c: Unknown   			  Int;
+0x020: Buffer Sizes (Vert, AuxVert, ?, ?)    Byte;
+--LOD 2 MESH TABLE-- (Size of Num LOD2 Meshes); Same as LOD1 Mesh Table
+--LOD 3 MESH TABLE-- (Size of Num LOD3 Meshes); Same as LOD1 Mesh Table
+
+--
+--Two Shorts
+--[Data Size, Int32] + Data Size
+--Byte: Num padding
+--Padding
+--BOUNDING BOXES: 4 float vector * 2 points
+-0x40 bytes
+--BONE INFO: 4 float vector * 2 * numBones
+
+
+--CHUNK 3,4,5-- (Three for each LoD)
+
+Will appear * num meshes
+
+--Vertex Table--
+--Aux Geo Data Table--
+--Indice Table Buffer--
+
+--CHUNK 9,10,11-- (For each LoD)
+
