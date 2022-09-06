@@ -168,5 +168,15 @@
             <artifactId>jocl-main</artifactId>
             <version>2.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.io7m.bundles</groupId>
+            <artifactId>org.jogamp</artifactId>
+            <version>2.3.2001</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>2.3.2</version>
+        </dependency>
     </dependencies>
 </project>
