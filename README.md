@@ -1,7 +1,11 @@
-FFXIV_DataExtractor
+### DEPRECATED BY https://github.com/NotNite/Alpha
 ===================
 
-### DEPRECATED BY https://github.com/NotNite/Alpha
+
+FFXIV_DataExtractor
+
+
+
 
 
 
